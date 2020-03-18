@@ -1,0 +1,4 @@
+device/sundavar/status/desired:
+  "ON": "awake AA:BB:CC:DD:EE:FF"
+device/vergathos/status/desired:
+  "ON": "awake FF:EE:DD:CC:BB:AA"

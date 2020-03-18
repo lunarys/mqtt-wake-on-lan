@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  mqtt-wol:
+    container_name: mqtt-wol
+    image: mqtt-wake-on-lan
+    build: image
+    restart: unless-stopped
+    environment:
+      - MQTT_USER=${MQTT_USER}
+      - MQTT_PASSWORD=${MQTT_PASSWORD}
+      - MQTT_BROKER=${MQTT_BROKER}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - "./devices.yaml:/src/mqtt/scripts.yaml"
+    network_mode: host
